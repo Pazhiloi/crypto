@@ -1,0 +1,28 @@
+html,
+body{
+  height: 100%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  color: $default;
+  background-color: $bg;
+}
+.main{
+  flex-grow: 1;
+}
+img{
+  object-fit: cover;
+}
+.container{
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title{
+  font-size: 30px;
+  line-height: 30px;
+  color: $title;
+}
+
