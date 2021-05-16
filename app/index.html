@@ -175,12 +175,12 @@
   </section>
   <section class="product">
     <div class="container">
-      <h2 class="product__title">
+      <h2 class="product__title title">
         Trade securely and market the high growth cryptocurrencies.
       </h2>
       <div class="product__items">
         <div class="product__item">
-          <svg width="80" height="80">
+          <svg class="product__svg" width="80" height="80">
             <use xlink:href="images/icons/sprite.svg#bitcoin"></use>
           </svg>
           <div class="product__name">
@@ -193,12 +193,34 @@
 
           </a>
         </div>
-          <svg width="80" height="80">
+        <div class="product__item">
+          <svg class="product__svg" width="80" height="80">
             <use xlink:href="images/icons/sprite.svg#ethereum"></use>
           </svg>
-          <svg width="80" height="80">
+          <div class="product__name">
+            Ethereum <sup class="product__sup">eth</sup>
+          </div>
+          <p class="product__text">
+            Blockchain technology to create and run decentralized digital applications.
+          </p>
+          <a class="product__link" href="#">
+
+          </a>
+        </div>
+        <div class="product__item">
+          <svg class="product__svg" width="80" height="80">
             <use xlink:href="images/icons/sprite.svg#litecoin"></use>
           </svg>
+          <div class="product__name">
+            Litecoin <sup class="product__sup">ltc</sup>
+          </div>
+          <p class="product__text">
+          Cryptocurrency that enables instant payments to anyone in the world.
+          </p>
+          <a class="product__link" href="#">
+
+          </a>
+        </div>
       </div>
     </div>  
   </section>
@@ -226,7 +248,7 @@
                 <use xlink:href="images/icons/sprite.svg#bitcoin"></use>
               </svg>
               <div class="market__coin-name">
-                Bitcoin<sup class="market__coin-sup">BTC</sup>
+                Bitcoin<sup class="market__coin-sup">btc</sup>
                 <div class="market__coin-amount">0.00080<span class="market__span">btc</span></div>
               </div>
             </div>
@@ -309,7 +331,7 @@
             </div>
             <div class="market__rate-price"><span>$</span>6750</div>
             <div class="market__rate-percent">
-              <svg class="market__rate-svg" width="40" height="40">
+              <svg class="market__profit-svg" width="16" height="16">
               <use xlink:href="images/icons/sprite.svg#profit-arrow"></use>
             </svg>
             +<span>7.3</span>%</div>
@@ -328,8 +350,8 @@
               </div>
             </div>
             <div class="market__rate-price"><span>$</span>156.83</div>
-            <div class="market__rate-percent">
-              <svg class="market__rate-svg" width="40" height="40">
+            <div class="market__rate-percent market__rate-percent--negative">
+              <svg class="market__profit-svg" width="16" height="16">
               <use xlink:href="images/icons/sprite.svg#loss-arrow"></use>
             </svg>
             -<span>0.9</span>%</div>
@@ -349,7 +371,7 @@
             </div>
             <div class="market__rate-price"><span>$</span>8535</div>
             <div class="market__rate-percent">
-              <svg class="market__rate-svg" width="40" height="40">
+              <svg class="market__profit-svg" width="16" height="16">
               <use xlink:href="images/icons/sprite.svg#profit-arrow"></use>
             </svg>
             +<span>7.3</span>%</div>
@@ -370,7 +392,7 @@
             </p>
           </div>
           <div class="form__wrapper">
-            <input class="form__input" type="text">
+            <input class="form__input" type="text" placeholder="Enter your email">
             <button class="form__button" type="submit">
               Subscribe
             </button>
