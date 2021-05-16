@@ -6,7 +6,19 @@ $bg1: #0d0d2b;
 $bg2: #2b076e;
 $link: #000; 
 
-
+%input{
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+%mini-btn{
+  height: 59px;
+  justify-content: center;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
 %btn{
   display: flex;
   align-items: center;
@@ -14,6 +26,10 @@ $link: #000;
   @extend %rubik-500;
   font-size: 18px;
   background-color: $accent1;
+  border-radius: 32px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
 }
 %arrow{
   display: flex;
@@ -21,6 +37,7 @@ $link: #000;
   align-items: center;
   width: 32px;
   height: 32px;
+  border-radius: 50%;
   background-color: #fff;
 }
 %rubik-700{
