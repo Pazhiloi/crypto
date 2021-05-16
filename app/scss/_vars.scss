@@ -1,5 +1,53 @@
-$default: #2b2311;
-$accent: #ff004c;
-$title:#2b2311;
-$bg: #fff;
-$link: #000;
+$default: #e0e0e0;
+$accent1: #3671e9;
+$accent2: #2b076e;
+$title:#fff;
+$bg1: #0d0d2b;
+$bg2: #2b076e;
+$link: #000; 
+
+
+%btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @extend %rubik-500;
+  font-size: 18px;
+  background-color: $accent1;
+}
+%arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+}
+%rubik-700{
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+}
+%rubik-500{
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 500;
+}
+%rubik-400{
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+}
+%inter-700{
+  font-family: 'Inter-Bold', sans-serif;
+  font-weight: 700;
+}
+%inter-600{
+  font-family: 'Inter-SemiBold', sans-serif;
+  font-weight: 600;
+}
+%inter-500{
+  font-family: 'Inter-Medium', sans-serif;
+  font-weight: 500;
+}
+%inter-400{
+  font-family: 'Inter-Regular', sans-serif;
+  font-weight: 400;
+}
