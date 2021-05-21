@@ -1,0 +1,321 @@
+@media (max-width: 1150px){
+  .feature{
+    &__inner{
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 40px;
+    }
+    &__title{
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+  .about{
+    &__inner{
+      padding: 40px 0;
+    }
+    &__items{
+      margin-bottom: 20px;
+    }
+    &__content{
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+  }
+  .product{
+    padding: 210px 0 20px;
+    &__items{
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 15px;
+    }
+  }
+  .market{
+    padding-top: 50px;
+    &__title{
+      margin-bottom: 50px;
+    }
+    &__content{
+      grid-template-columns: repeat(1,1fr);
+      padding-bottom: 40px;
+    }
+    &__info-title,
+    &__text{
+      text-align: center;
+      max-width: 100%;
+    }
+    &__link,
+    &__coin,
+    &__rate{
+      margin: 0 auto;
+    }
+    &__chart-wrapper{
+      padding-top: 130px;
+    }
+  }
+  .form{
+    &__form{
+      display: block;
+    }
+    &__title,
+    &__text{
+      text-align: center;
+      margin: 0 auto 30px;
+      max-width: 100%;
+    }
+    &__title{
+      &::before{
+        top: -48px;
+      }
+    }
+    &__wrapper{
+      max-width: 100%;
+      justify-content: center;
+      &::before{
+        bottom: -48px;
+      }
+    }
+  }
+  .about,
+  .feature{
+    &__image{
+      margin: 0 auto;
+    }
+    &__text{
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 970px){
+  .menu{
+    &__list{
+      transform: translateY(-200%);
+      position: absolute;
+      top: 120px;
+      width: 100%;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      z-index: 5;
+      transition: transform 0.5s ease;
+      background-color: $bg1;
+      &.menu__list--active{
+        transform: translateY(0);
+        transition: transform 0.5s ease;
+      }
+    }
+      &__item{
+      width: 100%;
+      padding: 0 15px;
+      text-align: center;
+      margin-left: 0;
+     }
+     &__item:not(:last-child){
+       margin-bottom: 10px;
+     }
+    &__link{
+      padding: 5px 0;
+      display: block;
+     }
+      &__btn{
+      display: block;
+    }
+  }
+  .about{
+    &__items{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
+  .hashrate{
+    padding-top: 20px;
+    &__form{
+      display: block;
+      padding-bottom: 10px;
+    }
+    &__info{
+      padding-top: 10px;
+    }
+    &__input,
+    &__select,
+    &__button{
+      margin: 0 auto 20px;
+      display: block;
+    }
+  }
+  .market{
+    &__rate-coin{
+      &:hover{
+        transform: translateX(-50px);
+      }
+    }
+  }
+  .title{
+    font-size: 30px;
+  }
+  .footer{
+    &__items{
+      grid-template-columns: repeat(2,1fr);
+    }
+    &__item{
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+@media (max-width: 600px){
+  .feature{
+    &__title{
+      font-size: 30px;
+    }
+  }
+  .hashrate{
+    &__price{
+      font-size: 25px;
+    }
+  }
+  .product{
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+    }
+    &__item{
+      margin: 0 auto;
+      min-height: 350px;
+      padding: 24px 24px;
+    }
+  }
+  .form{
+    padding: 44px 0;
+    &__title{
+      font-size: 25px;
+      line-height: 30px;
+    }
+    &__wrapper{
+      display: block;
+    }
+    &__button{
+      margin: 20px auto 0;
+    }
+    &__title,
+    &__wrapper{
+      &::before{
+        display: none;
+      }
+    }
+  }
+  .market{
+    &__rate{
+      padding: 20px 5px 20px 5px;
+    }
+    &__coin{
+      padding: 20px 20px 48px;
+    }
+    &__increase-wrapper{
+      left: 0;
+      max-width: 130px;
+      bottom: -140px;
+    }
+    &__price-wrapper{
+      right: 0;
+      max-width: 150px;
+      bottom: -95px;
+      padding: 8px 16px;
+    }
+    &__price-dollars,
+    &__price-sup{
+      font-size: 18px;
+    }
+    &__info-title{
+      font-size: 25px;
+      line-height: 30px;
+    }
+    &__chart-top,
+    &__chart{
+      padding: 15px 5px;
+    }
+    &__chart-item:not(:first-child){
+    margin-left: 0;
+  }
+  }
+  .title{
+    font-size: 20px;
+  }
+  .footer{
+    &__inner{
+      padding: 40px 0;
+    }
+    &__top{
+      padding-bottom: 0;
+    }
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+      grid-gap: 20px;
+    }
+    &__logo,
+    &__box{
+      margin: 0 auto;
+    }
+    &__bottom{
+      display: block;
+      text-align: center;
+    }
+    &__title{
+      font-size: 20px;
+    }
+    &__copy,
+    &__title{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (max-width: 535px){
+  .feature{
+    &__top{
+      display: block;
+      margin-bottom: 15px;
+    }
+    &__percent,
+    &__event{
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  .hashrate{
+    &__input{
+      &::placeholder{
+        font-size: 17px;
+      }
+      font-size: 25px;
+    }
+  }
+  .market{
+    &__rate,
+    &__chart-img,
+    &__chart-item--high,
+    &__chart-item--low,
+    &__chart-item--amount{
+      display: none;
+    }
+  }
+  .market-volume{
+    display: none;
+  }
+  .market-buttons{
+    &__button{
+      width: 35px;
+    }
+  }
+  .footer{
+    &__payment:not(:first-child){
+      margin: 0;
+    }
+    &__accept,
+    &__payment{
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+   
+  }
+}

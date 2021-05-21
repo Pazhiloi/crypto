@@ -32,6 +32,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/wowjs/dist/wow.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))

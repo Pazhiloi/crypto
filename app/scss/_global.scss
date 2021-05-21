@@ -10,6 +10,7 @@ body{
   flex-direction: column;
   color: $default;
   background-color: $bg1;
+  overflow-x: hidden;
 }
 .main{
   flex-grow: 1;

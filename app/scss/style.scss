@@ -11,6 +11,28 @@
     justify-content: space-between;
     align-items: center;
   }
+   &__fixed{
+    padding: 10px 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $bg1;
+    animation-name: show__header;
+    animation-duration: 1s;
+    justify-content: space-around;
+  }
+  @keyframes show__header{
+  0%{
+    opacity: 0;
+    top: -70px;
+  }
+  100%{
+    opacity: 1;
+    top: 0;
+  }
+  }
 }
 .menu{
   &__list{
@@ -33,7 +55,13 @@
     @extend %rubik-500;
     background-color: $accent1;
   }
-  
+  &__btn{
+    border: none;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+  }
 }
 .feature{
   &__inner{
@@ -53,7 +81,8 @@
     position: relative;
   }
   &__percent{
-    width: 113px;
+    max-width: 113px;
+    width: 100%;
     height: 30px;
     @extend %rubik-500;
     color: #0d0d2b;
@@ -63,7 +92,8 @@
   }
   &__event{
     color: #fff;
-    width: 292px;
+    max-width: 292px;
+    width: 100%;
     height: 40px;
     background-color:#252540;
     margin-left: -20px;
@@ -169,7 +199,7 @@
     padding: 50px;
     max-width: 942px;
     width: 100%;
-    height: 371px;
+    min-height: 371px;
     border-radius: 16px 16px 0px 0px;
     background-color: #fff;
     filter: drop-shadow(0px 20px 200px rgba(57, 23, 119, 0.05));
@@ -185,6 +215,7 @@
     color: #0d0d2b;
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 20px;
     &::placeholder{
       color: #0d0d2b;
     font-size: 20px;
@@ -290,7 +321,7 @@
     text-align: center;
   }
   &__content{
-    padding-bottom: 120px;
+    padding-bottom: 130px;
     grid-gap: 100px;
   }
   &__info-title{
@@ -425,8 +456,9 @@
     padding: 40px 35px 40px 40px;
   }
   &__rate-top{
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 25px;
     margin-bottom: 16px;
   }
   &__rate-descr{
@@ -434,17 +466,22 @@
     font-size: 14px;
     line-height: 17px;
   }
-  &__rate-descr:not(:last-child){
-    margin-right: 90px;
-  }
   &__rate-coin{
-    display: flex;
-    align-items: center;
-    max-width: 610px;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
     height: 79px;
     border-radius: 16px;
+    position: relative;
     transition: all 0.5s ease;
+    &:hover{
+      background-color: #491F98;
+      backdrop-filter: blur(250px);
+      transform: translateX(-120px);
+    }
+  }
+  &__rate-coinwrapper{
+    display: flex;
   }
   &__rate-abbreviation{
     @extend %inter-700;
@@ -454,17 +491,12 @@
     text-transform: uppercase;
   }
   &__rate-wrapper{
-    margin-left: 16px;
+    margin-left: 5px;
   }
   &__rate-name{
     @extend %inter-400;
     line-height: 19px;
     color: #f2f2f2;
-  }
-  &__rate-price,
-  &__rate-percent,
-  &__rate-volume{
-    margin-left: 72px;
   }
   &__rate-percent{
     display: flex;
@@ -477,6 +509,122 @@
   }
   &__profit-svg{
     margin-right: 8px;
+  }
+  &__rate-coinwrapper,
+  &__rate-price,
+  &__rate-percent,
+  &__rate-volume{
+    display: flex;
+    align-items: center;
+  }
+  &__chart-top,
+  &__chart{
+    width: 100%;
+    background-color: #35068C;
+    padding: 15px 40px;
+  }
+  &__chart-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 76px;
+    border-radius: 16px;
+  }
+  &__chart{
+    border-radius: 0px 16px 16px 0px;
+    min-height: 369px;
+  }
+  &__chart-item:not(:first-child){
+    margin-left: 25px;
+  }
+  &__chart-trend{
+    display: flex;
+    font-size: 14px;
+  }
+  &__chart-subtext{
+    font-size: 10px;
+    line-height: 15px;
+    color: #bdbdbd;
+    margin-top: 10px;
+  }
+  &__chart-amount,
+  &__chart-levels,
+  &__name{
+    @extend %rubik-500;
+    font-size: 14px;
+  }
+  &__chart-account{
+    display: flex;
+    margin-left: 10px;
+  }
+  &__chart-img{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+  &__name-wrapper{
+    margin-left: 10px;
+  }
+  &__name{
+    margin-bottom: 10px;
+  }
+  &__status{
+    @extend %rubik-500;
+    font-size: 10px;
+    line-height: 15px;
+    color: #6edcb5;
+    text-transform: uppercase;
+  }
+  &__chart-info{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__subtext{
+    font-size: 8px;
+    line-height: 12px;
+    margin-top: 5px;
+  }
+}
+.percent-chart{
+  @extend %rubik-500;
+  color: #42FFFF;
+}
+.market-price{
+  display: flex;
+  align-items: center;
+  &__wrapper{
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &__percent{
+    font-size: 10px;
+    line-height: 15px;
+    margin-left: 5px;
+    color: #42ffff;
+  }
+}
+.market-volume{
+  margin-left: 20px;
+  &__coin{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.market-buttons{
+  display: flex;
+  align-items: center;
+  &__button:not(:first-child){
+    margin-left: 10px;
+    background-color: #ff325f;
+  }
+  &__button{
+    @extend %btn;
+    @extend %mini-btn;
+    width: 71px;
+    height: 34px;
+    background-color: #6edcb5;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 .form{
@@ -519,10 +667,22 @@
   &__wrapper{
     display: flex;
     align-items: center;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      right: -33px;
+      bottom: -80px;
+      background-image: url('..//images/content/bitcoin-bg.svg');
+      background-repeat: no-repeat;
+      width: 140px;
+      height: 136px;
+    }
   }
   &__input{
     @extend %input;
-    width: 374px;
+    max-width: 374px;
+    width: 100%;
     color: #fff;
     background-color: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -532,12 +692,71 @@
     }
   }
   &__button{
-    
     @extend %btn;
     @extend %mini-btn;
     width: 152px;
     height: 55px;
     background-color: #fff;
+  }
+}
+.footer{
+  &__inner{
+    padding: 80px 0;
+  }
+  &__top{
+    padding-bottom: 120px;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+  }
+  &__logo{
+    width: 135px;
+    height: 40px;
+  }
+  &__item{
+    width: 200px;
+  }
+  &__item-title{
+    @extend %rubik-500;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+  &__list-item{
+    margin-bottom: 20px;
+  }
+  &__link{
+    @extend %rubik-400;
+    color: rgba(224, 224, 224, 0.8);
+  }
+  &__title{
+    @extend %rubik-500;
+    font-size: 32px;
+    margin-bottom: 40px;
+    max-width: 355px;
+    width: 100%;
+  }
+  &__accept{
+    display: flex;
+    align-items: center;
+  }
+  &__payment:not(:first-child){
+    margin-left: 25px;
+  }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__copy{
+    color: #fff;
+  }
+  &__social{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 25px;
   }
 }
 
